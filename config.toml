@@ -1,6 +1,6 @@
-baseURL = "https://keyin.me"
+baseURL = "https://masonxu.xyz"
 languageCode = "zh-cn"
-title = "World of Forks"
+title = "Stone Cave"
 metaDataFormat = "yaml"
 
 theme = "canoe"
@@ -19,12 +19,12 @@ publishDir = "docs"
   filename = "sitemap.xml"
 
 [params]
-  author = "Kevin Tan"
+  author = "Mason Xu"
   description = "Tempora mutantur, nos et mutamur in illis ..."
-  copyright = "Copyleft@Kevin Tan"
+  copyright = "Copyleft@Mason Xu"
 
   # 用户头像地址, user avatar's url
-  logo = "/img/avatar.jpg"
+  logo = "/img/avatar2.jpg"
   
   # 首页横幅的背景链接, home banner's background url.
   splash_bg = "/img/bg.jpg"
@@ -94,14 +94,14 @@ publishDir = "docs"
 [[menu.social]]
   pre = "<svg class='svg-icons svg-icons-github'><use xlink:href='#svg-icons-github'></use></svg>"
   name = "Github"
-  url = "https://github.com/stkevintan"
+  url = "https://github.com/mason-xu"
 
 [[menu.social]]
-  pre = "<svg class='svg-icons svg-icons-twitter'><use xlink:href='#svg-icons-twitter'></use></svg>"
-  name = "Twitter"
+  pre = "<svg class='svg-icons svg-icons-google-plus3'><use xlink:href='#svg-icons-google-plus3'></use></svg>"
+  name = "Google"
   url = "https://twitter.com/kevinsfork"
 
 [[menu.social]]
   pre = "<svg class='svg-icons svg-icons-sina-weibo'><use xlink:href='#svg-icons-sina-weibo'></use></svg>"
   name = "Weibo"
-  url = "http://weibo.com/kevinclasky"
+  url = "http://weibo.com/maosnxu"
