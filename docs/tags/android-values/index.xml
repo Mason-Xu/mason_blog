@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android Values on Stone Cave</title>
+    <link>https://masonxu.xyz/tags/android-values/</link>
+    <description>Recent content in Android Values on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Mon, 13 Nov 2017 19:46:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/tags/android-values/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android colors.xml资源文件</title>
+      <link>https://masonxu.xyz/posts/color.xml-resource-file/</link>
+      <pubDate>Mon, 13 Nov 2017 19:46:41 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/color.xml-resource-file/</guid>
+      <description>colors.xml资源文件 在开发者进行android开发的时候,往往要设置很多颜色,通常使用RGB颜色 比如 代表绿色 但是一个项目有很多地方要</description>
+    </item>
+    
+  </channel>
+</rss>

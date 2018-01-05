@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradle on Stone Cave</title>
+    <link>https://masonxu.xyz/tags/gradle/</link>
+    <description>Recent content in Gradle on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Wed, 01 Nov 2017 19:46:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决Android Studio Gradle 下载问题</title>
+      <link>https://masonxu.xyz/posts/android-studio-gradle-the-program-of-download/</link>
+      <pubDate>Wed, 01 Nov 2017 19:46:41 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/android-studio-gradle-the-program-of-download/</guid>
+      <description>安装Android Studio 时遇到 Buileing &amp;ldquo;xxx&amp;rdquo; Gradle project info 的解决方法 我第一次启动Android Studio的时候,遇到 Grale 一直下载不下来,后来找到解决方法 1.首先在</description>
+    </item>
+    
+  </channel>
+</rss>

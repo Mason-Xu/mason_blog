@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Stone Cave</title>
+    <link>https://masonxu.xyz/categories/</link>
+    <description>Recent content in Categories on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Thu, 28 Dec 2017 14:36:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android随笔</title>
+      <link>https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Thu, 28 Dec 2017 14:36:24 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://masonxu.xyz/categories/git/</link>
+      <pubDate>Thu, 04 Jan 2018 13:01:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>杂记</title>
+      <link>https://masonxu.xyz/categories/%E6%9D%82%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 2018 10:46:41 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/categories/%E6%9D%82%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

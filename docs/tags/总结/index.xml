@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>总结 on Stone Cave</title>
+    <link>https://masonxu.xyz/tags/%E6%80%BB%E7%BB%93/</link>
+    <description>Recent content in 总结 on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Mon, 01 Jan 2018 10:46:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2017年总结</title>
+      <link>https://masonxu.xyz/posts/2017review/</link>
+      <pubDate>Mon, 01 Jan 2018 10:46:41 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/2017review/</guid>
+      <description>2017年总结 2017年是我改变的一个重要的一年. 暑假的时候决定考研,开学后,看了会书,但是被Android比赛耽搁了.希望在2018年继续</description>
+    </item>
+    
+  </channel>
+</rss>

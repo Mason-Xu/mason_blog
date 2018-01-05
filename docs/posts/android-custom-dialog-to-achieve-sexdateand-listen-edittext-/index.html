@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><title>Android 自定义 Dialog | Stone Cave</title><meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1"><link rel="canonical" href="https://masonxu.xyz/posts/android-custom-dialog-to-achieve-sexdateand-listen-edittext-/"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/ocean.min.css" rel="stylesheet"><link rel="stylesheet" href="https://masonxu.xyz/css/index-128431572d.css"><link href="https://masonxu.xyz/index.xml" rel="alternate" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/index.xml" rel="feed" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/favicon.ico" rel="shortcut icon"><script>window.baseURL = 'https:\/\/masonxu.xyz';</script></head><body><div class="navbar-fixed"><nav class="navbar"><div class="nav-container container"><div class="nav-wrapper inner"><a href="javascript:void(0)" data-activates="sidebar" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i> </a><a href="https://masonxu.xyz" class="brand-logo"><i class="material-icons hide-on-med-and-down">restaurant_menu</i> Stone Cave</a><ul class="nav-menu tabs tabs-transparent hide-on-med-and-down"><li class="tab"><a href="https://masonxu.xyz/" class="">Home</a></li><li class="tab"><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li class="tab"><a href="https://masonxu.xyz/about/" class="">About</a></li></ul><form class="nav-form hide-on-small-and-down"><div class="form-group"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"></div><div class="form-popout"><div class="search-result"><label>暂无搜索结果</label><ul></ul></div></div></form><ul class="nav-menu apps"><li><a class="search-btn hide-on-med-and-up" href="#search-panel"><i class="material-icons">search</i></a></li><li><a class="term-btn hide-on-small-and-down" href="#term-panel"><i class="material-icons">apps</i></a></li><li><a class="rss-btn hide-on-small-and-down" href="https://masonxu.xyz/index.xml" target="_blank"><i class="material-icons">rss_feed</i></a></li></ul></div></div></nav></div><div class="mobile-search hide-on-med-and-up"><div class="header"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"> <i class="material-icons mobile-search-close">cancel</i></div><div class="content"><label>暂无搜索结果</label><ul></ul></div></div><div class="taxonomy"><div class="container"><div class="inner"><div class="taxonomy-panel row"><div class="col s6"><label>Category</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94">android随笔 <span class="badge">6</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/%E6%9D%82%E8%AE%B0">杂记 <span class="badge">1</span></a></li></ul></div><div class="col s6"><label>Tag</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android">android <span class="badge">5</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android-values">android-values <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/dialog">dialog <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/edittext">edittext <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/github">github <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/gradle">gradle <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/studio">studio <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/%E6%80%BB%E7%BB%93">总结 <span class="badge">1</span></a></li></ul></div></div></div></div></div><ul class="side-nav" id="sidebar"><li><a href="https://masonxu.xyz/" class="">Home</a></li><li><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li><a href="https://masonxu.xyz/about/" class="">About</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/categories/">Categories</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/tags/">Tags</a></li><li><a class="rss-btn-mobile hide-on-med-only" href="https://masonxu.xyz/index.xml" target="_blank">Rss</a></li></ul><main id="single" role="main" class="main-panel"><section class="container"><div class="inner"><section class="post-wrapper"><div class="toc-panel"><nav id="TableOfContents"><ul><li><a href="#android-自定义-dialog-实现-性别选择-日期选择和-自定义布局获取edittext内容">Android 自定义 Dialog ,实现 性别选择,日期选择和 自定义布局获取EditText内容</a><ul><li><a href="#日期选择器">日期选择器</a></li><li><a href="#性别选择器">性别选择器</a></li><li><a href="#自定义dialog-布局-获取edittext输入框的数据">自定义Dialog 布局,获取EditText输入框的数据</a></li><li><a href="#通常的alertdialog-实现退出账号效果">通常的AlertDialog 实现退出账号效果</a></li><li><a href="#城市选择器">城市选择器</a></li></ul></li></ul></nav></div><div class="post reveal"><div class="card"><section class="breadcrumb-wrapper"><div class="breadcrumbs" role="navigation" aria-label="breadcrumbs navigation"><a class="breadcrumb" href="https://masonxu.xyz"><i class="material-icons">location_on</i>Home</a> <a class="breadcrumb" href="https://masonxu.xyz/posts/">Posts</a> <span class="breadcrumb">Android 自定义 Dialog</span></div></section><div class="card-content"><section class="metadata-wrapper"><span class="card-title">Android 自定义 Dialog </span><span class="card-meta"><time><span>Thu Dec 28 2017</span></time><address><a href="https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94">Android随笔</a>&nbsp;</address></span></section><article class="article"><h1 id="android-自定义-dialog-实现-性别选择-日期选择和-自定义布局获取edittext内容">Android 自定义 Dialog ,实现 性别选择,日期选择和 自定义布局获取EditText内容</h1><blockquote><p>Dialog类是对话框的基类,但是应该避免直接实例化Dialog,而是应该尽量使用下列子列之一 :<br>AlertDialog<br>此对话框可显示标题、最多三个按钮、可选择项列表或自定义布局。 DatePickerDialog 或 TimePickerDialog<br>此对话框带有允许用户选择日期或时间的预定义 UI。<br>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;来自于Google Android Develop 开发手册</p></blockquote><p><img src="http://oz2u8kxpt.bkt.clouddn.com/17-12-28/753738.jpg?imageslim" alt=""></p><h2 id="日期选择器">日期选择器</h2><p>这里我们用到了Android原生提供的日期选择器对话框 DatePickerDialog</p><ol><li>首先你可以先设定一个date,让DatePickerDialog 点击时显示你设定的时间.通常我们都是获取当前date来显示.所以我们要用到calender来获取当前date</li></ol><pre><code class="language-java">Calendar nowdate = Calendar.getInstance();
+int mYear = nowdate.get(Calendar.YEAR);
+int mMonth = nowdate.get(Calendar.MONTH);
+int mDay = nowdate.get(Calendar.DAY_OF_MONTH);
+</code></pre><ol><li>然后你可以在按钮 onClick() 点击事件中设置触发 DatePickerDialog<ul><li>传入五个参数 parent context ,监听器,年,月,日</li></ul></li></ol><pre><code class="language-java">new DatePickerDialog(MainActivity.this, onDateSetListener, mYear, mMonth, mDay).show();
+</code></pre><ol><li>设置日期选择器对话框的监听器 , DatePickerDialog.OnDateSetListener<ul><li>void onDateSet (DatePicker view, int year, int month, int dayOfMonth)</li><li>将获取到的date转换成字符串显示到textview</li></ul></li></ol><pre><code class="language-java">private DatePickerDialog.OnDateSetListener onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            int mYear = year;
+            int mMonth = monthOfYear;
+            int mDay = dayOfMonth;
+            TextView date_textview = (TextView) findViewById(R.id.changebirth_textview);
+            String days;
+            days = new StringBuffer().append(mYear).append(&quot;年&quot;).append(mMonth).append(&quot;月&quot;).append(mDay).append(&quot;日&quot;).toString();
+            date_textview.setText(days);
+        }
+    };
+</code></pre><blockquote><p>参考自<a href="https://developer.android.com/reference/android/app/DatePickerDialog.OnDateSetListener.html?hl=zh-cn">Google Android Develop DatePickerDialog</a></p></blockquote><h2 id="性别选择器">性别选择器</h2><ol><li>首先我们要创建一个数组,来提供选择的选项 <code>java private String[] sexArry = new String[]{&quot;不告诉你&quot;, &quot;女&quot;, &quot;男&quot;};// 性别选择</code></li><li>设置点击事件后,实现性别选择器的方法 ,这里我们使用了AlertDialog</li></ol><pre><code class="language-java">private void showSexChooseDialog() {
+        AlertDialog.Builder builder3 = new AlertDialog.Builder(this);// 自定义对话框
+        builder3.setSingleChoiceItems(sexArry, 0, new DialogInterface.OnClickListener() {// 2默认的选中
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {// which是被选中的位置
+                // showToast(which+&quot;&quot;);
+                changesex_textview.setText(sexArry[which]);
+                dialog.dismiss();// 随便点击一个item消失对话框，不用点击确认取消
+            }
+        });
+        builder3.show();// 让弹出框显示
+    }
+</code></pre><h2 id="自定义dialog-布局-获取edittext输入框的数据">自定义Dialog 布局,获取EditText输入框的数据</h2><ol><li>使用使用LayoutInflater来加载dialog_setname.xml布局</li><li>初始化AlertDialog,使用setView()方法将自定义View显示到dialog</li><li>设置AlertDialog的按钮,设置点击事件来 获取EditText输入框的内容,然后设置TextView的内容.</li></ol><ul><li><p>布局文件 ```xml<linearlayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"></linearlayout></p><p><edittext android:id="@+id/changename_edit" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginleft="16dp" android:layout_marginright="16dp" android:layout_margintop="32dp" android:hint="昵称"></p></li></ul><p></p><pre><code>
+- 自定义Dialog获取输入框内容方法
+```java
+private void onCreateNameDialog() {
+        // 使用LayoutInflater来加载dialog_setname.xml布局
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View nameView = layoutInflater.inflate(R.layout.dialog_setname, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                this);
+
+        // 使用setView()方法将布局显示到dialog
+        alertDialogBuilder.setView(nameView);
+
+        final EditText userInput = (EditText) nameView.findViewById(R.id.changename_edit);
+        final TextView name = (TextView) findViewById(R.id.changename_textview);
+
+
+        // 设置Dialog按钮
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton(&quot;OK&quot;,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // 获取edittext的内容,显示到textview
+                                name.setText(userInput.getText());
+                            }
+                        })
+                .setNegativeButton(&quot;Cancel&quot;,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+    }
+</code></pre><h2 id="通常的alertdialog-实现退出账号效果">通常的AlertDialog 实现退出账号效果</h2><ul><li>设置Yes和Cancel按钮和点击事件</li></ul><pre><code class="language-java">AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+builder1.setMessage(&quot;确定退出账号?&quot;)
+        .setPositiveButton(&quot;Yes&quot;, new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface dialog, int id) {
+                  finish();  // 这里使用finish() 模拟下退出账号~
+              }
+        })
+        .setNegativeButton(&quot;No&quot;, new DialogInterface.OnClickListener() {
+              public void onClick(DialogInterface dialog, int id) {
+                  // User cancelled the dialog
+              }
+        });
+// Create the AlertDialog object and return it
+builder1.show();
+</code></pre><h2 id="城市选择器">城市选择器</h2><p>目前还没有实现&hellip; 但是我在看Github上的<a href="https://github.com/crazyandcoder/citypicker">citypicker</a> 目前还在学习中,如果有实现的可以讨论一下.</p><blockquote><p><a href="https://developer.android.com/guide/topics/ui/dialogs.html?hl=zh-cn">Google Android Develop Dialog</a></p></blockquote></article></div><div class="card-action card-action-links"><a class="btn btn-secondary" href="https://masonxu.xyz/tags/dialog">Dialog</a></div><div class="card-action"><div id="comment"></div><style>.v .vwrap .vheader .vinput:focus {
+    border-bottom-color: #607d8b;
+  }</style><script>(function (u1, u2, v) {
+    var c = arguments - 1;
+    function a(u) {
+      var d = document, t = 'script', o = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      o.addEventListener('load', function () { --c || new Valine(v); }, false);
+      s.parentElement.insertBefore(o, s);
+    }
+    a(u1); a(u2);
+  })(window.baseURL + '/js/av-min.js', window.baseURL + '/js/Valine.min.js', {
+    el: '#comment',
+    notify: false,
+    verify: false,
+    appId: 'drenIDLMO3yTwiuCl7Hva9nq-gzGzoHsz',
+    appKey: 'rfotKaw6cevwHhOR8FvhwPAp',
+    placeholder: '写点什么吧...',
+    path: window.location.pathname,
+    avatar: 'retro'
+  });</script></div><div class="pagination-single"><span class="pagination-item previous"><i class="material-icons">navigate_before</i> <a href="https://masonxu.xyz/posts/android-change-underline-color/" rel="prev">Android EditText下划线颜色变换</a> </span><span class="pagination-item next"><i class="material-icons">navigate_next</i> <a href="https://masonxu.xyz/posts/2017review/" rel="next">2017年总结</a></span></div></div></div></section></div></section><footer class="page-footer"><div class="container"><div class="inner"><div class="row"><div class="col l6 s12"><h5 class="white-text">Stone Cave</h5><p class="grey-text text-lighten-4">Theme <a href="https://github.com/stkevintan/canoe" target="_blank">canoe</a> designed by <a href="https://github.com/stkevintan" target="_blank">Kevin Tan</a> with ❤</p><ul class="slink"><li><a href="https://github.com/mason-xu" target="_blank" title="Github"><svg class="svg-icons svg-icons-github"><use xlink:href="#svg-icons-github"></use></svg></a></li><li><a href="https://twitter.com/kevinsfork" target="_blank" title="Google"><svg class="svg-icons svg-icons-google-plus3"><use xlink:href="#svg-icons-google-plus3"></use></svg></a></li><li><a href="http://weibo.com/maosnxu" target="_blank" title="Weibo"><svg class="svg-icons svg-icons-sina-weibo"><use xlink:href="#svg-icons-sina-weibo"></use></svg></a></li></ul></div><div class="col l4 offset-l2 s12"><h5 class="white-text">My Friends</h5><ul><li><a class="grey-text text-lighten-3" href="https://frantic1048.logdown.com/" target="_blank">Frantic1048</a></li><li><a class="grey-text text-lighten-3" href="https://hclmaster.github.io/" target="_blank">HclMaster</a></li><li><a class="grey-text text-lighten-3" href="https://whst.github.io/" target="_blank">WANG Hsü-Tung</a></li></ul></div></div></div></div><div class="footer-copyright"><div class="container"><div class="inner">Copyleft@Mason Xu</div></div></div></footer></main><script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script><script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/go.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://cdn.bootcss.com/lunr.js/2.1.5/lunr.min.js"></script><script type="text/javascript" src="https://masonxu.xyz/js/index-d8a1f91919.js"></script></body></html>

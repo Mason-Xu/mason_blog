@@ -3,6 +3,5 @@
 /.tmp/
 node_modules/
 yarn.lock
-/docs/
 /backup/
 .directory
