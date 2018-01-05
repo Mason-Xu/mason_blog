@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Stone Cave</title>
-    <link>http://masonxu.xyz/categories/git/</link>
+    <link>https://masonxu.xyz/categories/git/</link>
     <description>Recent content in Git on Stone Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyleft@Mason Xu</copyright>
     <lastBuildDate>Thu, 04 Jan 2018 13:01:52 +0800</lastBuildDate>
     
-	<atom:link href="http://masonxu.xyz/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://masonxu.xyz/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git和Github使用札记</title>
-      <link>http://masonxu.xyz/posts/git-and-github/</link>
+      <link>https://masonxu.xyz/posts/git-and-github/</link>
       <pubDate>Thu, 04 Jan 2018 13:01:52 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/git-and-github/</guid>
+      <guid>https://masonxu.xyz/posts/git-and-github/</guid>
       <description>Git 和 Github的使用札记 git git init // 创建本地仓库 git status // 掌握仓库当前的状态 git add // 添加修改文件到stage git commit -m&amp;quot;text&amp;quot;// 提交文件到Git仓库 github git remote add origin git@github.com:username/repository.git //</description>
     </item>
     

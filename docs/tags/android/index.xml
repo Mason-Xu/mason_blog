@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android on Stone Cave</title>
-    <link>http://masonxu.xyz/tags/android/</link>
+    <link>https://masonxu.xyz/tags/android/</link>
     <description>Recent content in Android on Stone Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyleft@Mason Xu</copyright>
     <lastBuildDate>Sat, 02 Dec 2017 19:46:41 +0800</lastBuildDate>
     
-	<atom:link href="http://masonxu.xyz/tags/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://masonxu.xyz/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android EditText下划线颜色变换</title>
-      <link>http://masonxu.xyz/posts/android-change-underline-color/</link>
+      <link>https://masonxu.xyz/posts/android-change-underline-color/</link>
       <pubDate>Sat, 02 Dec 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/android-change-underline-color/</guid>
+      <guid>https://masonxu.xyz/posts/android-change-underline-color/</guid>
       <description>Android EditText下划线颜色变换 首先要用到style.xml文件,新建自定义EditText控件style res-&amp;gt;values-&amp;gt;style.xml 添加 &amp;lt;style name=&amp;quot;MyEditText&amp;quot; parent=&amp;quot;Theme.AppCompat.Light&amp;quot;&amp;gt; &amp;lt;item name=&amp;quot;colorControlNormal&amp;quot;&amp;gt;@android:color/white&amp;lt;/item&amp;gt; &amp;lt;item name=&amp;quot;colorControlActivated&amp;quot;&amp;gt;@android:color/holo_blue_dark&amp;lt;/item&amp;gt; &amp;lt;/style&amp;gt; 不点击时设置</description>
     </item>
     
     <item>
       <title>Android 沉浸式状态栏</title>
-      <link>http://masonxu.xyz/posts/translucent-bar-immersive-bar/</link>
+      <link>https://masonxu.xyz/posts/translucent-bar-immersive-bar/</link>
       <pubDate>Tue, 14 Nov 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/translucent-bar-immersive-bar/</guid>
+      <guid>https://masonxu.xyz/posts/translucent-bar-immersive-bar/</guid>
       <description>如何做到沉浸式状态栏&amp;mdash;更加准确的说是透明状态栏 Translucent Bar 设置imageView图片 高宽 match_parent 但是没有隐藏ActionBar 效果: 透明状态栏</description>
     </item>
     
     <item>
       <title>Android colors.xml资源文件</title>
-      <link>http://masonxu.xyz/posts/color.xml-resource-file/</link>
+      <link>https://masonxu.xyz/posts/color.xml-resource-file/</link>
       <pubDate>Mon, 13 Nov 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/color.xml-resource-file/</guid>
+      <guid>https://masonxu.xyz/posts/color.xml-resource-file/</guid>
       <description>colors.xml资源文件 在开发者进行android开发的时候,往往要设置很多颜色,通常使用RGB颜色 比如 代表绿色 但是一个项目有很多地方要</description>
     </item>
     
     <item>
       <title>解决Android Studio Gradle 下载问题</title>
-      <link>http://masonxu.xyz/posts/android-studio-gradle-the-program-of-download/</link>
+      <link>https://masonxu.xyz/posts/android-studio-gradle-the-program-of-download/</link>
       <pubDate>Wed, 01 Nov 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/android-studio-gradle-the-program-of-download/</guid>
+      <guid>https://masonxu.xyz/posts/android-studio-gradle-the-program-of-download/</guid>
       <description>安装Android Studio 时遇到 Buileing &amp;ldquo;xxx&amp;rdquo; Gradle project info 的解决方法 我第一次启动Android Studio的时候,遇到 Grale 一直下载不下来,后来找到解决方法 1.首先在</description>
     </item>
     
     <item>
       <title>解决Android Studio太卡的方法</title>
-      <link>http://masonxu.xyz/posts/android-studio-thewaytosolveslow/</link>
+      <link>https://masonxu.xyz/posts/android-studio-thewaytosolveslow/</link>
       <pubDate>Wed, 01 Nov 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/android-studio-thewaytosolveslow/</guid>
+      <guid>https://masonxu.xyz/posts/android-studio-thewaytosolveslow/</guid>
       <description>解决Android Studio太卡的方法 修改Java 虚拟机启动时的参数，用于限制最大堆内存 在Android Studio Help-&amp;gt;Edit Custom VM Option 打开 在这里加上 -Xmx2g 或者 -Xmx4g 如</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Edittext on Stone Cave</title>
-    <link>http://masonxu.xyz/tags/edittext/</link>
+    <link>https://masonxu.xyz/tags/edittext/</link>
     <description>Recent content in Edittext on Stone Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyleft@Mason Xu</copyright>
     <lastBuildDate>Sat, 02 Dec 2017 19:46:41 +0800</lastBuildDate>
     
-	<atom:link href="http://masonxu.xyz/tags/edittext/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://masonxu.xyz/tags/edittext/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android EditText下划线颜色变换</title>
-      <link>http://masonxu.xyz/posts/android-change-underline-color/</link>
+      <link>https://masonxu.xyz/posts/android-change-underline-color/</link>
       <pubDate>Sat, 02 Dec 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/android-change-underline-color/</guid>
+      <guid>https://masonxu.xyz/posts/android-change-underline-color/</guid>
       <description>Android EditText下划线颜色变换 首先要用到style.xml文件,新建自定义EditText控件style res-&amp;gt;values-&amp;gt;style.xml 添加 &amp;lt;style name=&amp;quot;MyEditText&amp;quot; parent=&amp;quot;Theme.AppCompat.Light&amp;quot;&amp;gt; &amp;lt;item name=&amp;quot;colorControlNormal&amp;quot;&amp;gt;@android:color/white&amp;lt;/item&amp;gt; &amp;lt;item name=&amp;quot;colorControlActivated&amp;quot;&amp;gt;@android:color/holo_blue_dark&amp;lt;/item&amp;gt; &amp;lt;/style&amp;gt; 不点击时设置</description>
     </item>
     

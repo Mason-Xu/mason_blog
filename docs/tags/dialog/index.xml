@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dialog on Stone Cave</title>
-    <link>http://masonxu.xyz/tags/dialog/</link>
+    <link>https://masonxu.xyz/tags/dialog/</link>
     <description>Recent content in Dialog on Stone Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyleft@Mason Xu</copyright>
     <lastBuildDate>Thu, 28 Dec 2017 14:36:24 +0800</lastBuildDate>
     
-	<atom:link href="http://masonxu.xyz/tags/dialog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://masonxu.xyz/tags/dialog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android 自定义 Dialog</title>
-      <link>http://masonxu.xyz/posts/android-custom-dialog-to-achieve-sexdateand-listen-edittext-/</link>
+      <link>https://masonxu.xyz/posts/android-custom-dialog-to-achieve-sexdateand-listen-edittext-/</link>
       <pubDate>Thu, 28 Dec 2017 14:36:24 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/android-custom-dialog-to-achieve-sexdateand-listen-edittext-/</guid>
+      <guid>https://masonxu.xyz/posts/android-custom-dialog-to-achieve-sexdateand-listen-edittext-/</guid>
       <description>Android 自定义 Dialog ,实现 性别选择,日期选择和 自定义布局获取EditText内容 Dialog类是对话框的基类,但是应该避免直接实例化Dialog,而是</description>
     </item>
     

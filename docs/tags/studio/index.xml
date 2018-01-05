@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Studio on Stone Cave</title>
-    <link>http://masonxu.xyz/tags/studio/</link>
+    <link>https://masonxu.xyz/tags/studio/</link>
     <description>Recent content in Studio on Stone Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyleft@Mason Xu</copyright>
     <lastBuildDate>Wed, 01 Nov 2017 19:46:41 +0800</lastBuildDate>
     
-	<atom:link href="http://masonxu.xyz/tags/studio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://masonxu.xyz/tags/studio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决Android Studio太卡的方法</title>
-      <link>http://masonxu.xyz/posts/android-studio-thewaytosolveslow/</link>
+      <link>https://masonxu.xyz/posts/android-studio-thewaytosolveslow/</link>
       <pubDate>Wed, 01 Nov 2017 19:46:41 +0800</pubDate>
       
-      <guid>http://masonxu.xyz/posts/android-studio-thewaytosolveslow/</guid>
+      <guid>https://masonxu.xyz/posts/android-studio-thewaytosolveslow/</guid>
       <description>解决Android Studio太卡的方法 修改Java 虚拟机启动时的参数，用于限制最大堆内存 在Android Studio Help-&amp;gt;Edit Custom VM Option 打开 在这里加上 -Xmx2g 或者 -Xmx4g 如</description>
     </item>
     
