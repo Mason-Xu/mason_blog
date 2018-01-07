@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datastructure on Stone Cave</title>
+    <link>https://masonxu.xyz/categories/datastructure/</link>
+    <description>Recent content in Datastructure on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Sun, 07 Jan 2018 17:51:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/categories/datastructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Structure 思维导图</title>
+      <link>https://masonxu.xyz/posts/data_structure_mindmap/</link>
+      <pubDate>Sun, 07 Jan 2018 17:51:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/data_structure_mindmap/</guid>
+      <description>Data Structure 数据结构思维导图整理 这个思维导图根据自中国大学MOOC的浙大数据结构课的目录. 目前我还是好多没有掌握 1. 树的那一块,递归函数要多理解. 2. 指</description>
+    </item>
+    
+  </channel>
+</rss>

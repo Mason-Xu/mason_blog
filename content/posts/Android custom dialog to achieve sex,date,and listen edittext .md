@@ -1,9 +1,7 @@
 ---
 title: Android 自定义 Dialog
-tags:
-  - Dialog
-categories:
-  - Android随笔
+tags: [Dialog]
+categories: [Android随笔]
 date: 2017-12-28T14:36:24+08:00
 ---
 # Android 自定义 Dialog ,实现 性别选择,日期选择和 自定义布局获取EditText内容
