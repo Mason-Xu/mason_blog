@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>List on Stone Cave</title>
+    <link>https://masonxu.xyz/tags/list/</link>
+    <description>Recent content in List on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Mon, 22 Jan 2018 22:25:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/tags/list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>线性表(List)</title>
+      <link>https://masonxu.xyz/posts/3.2.datasturcturelist/</link>
+      <pubDate>Mon, 22 Jan 2018 22:25:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/3.2.datasturcturelist/</guid>
+      <description>线性表 线性表的定义 类型名称: 线性表(List) 数据对象集: 有序序列,(a1,a2,a3, &amp;hellip; ,an), a1是表头,an是表尾 ,有前驱结点(直接前驱)和</description>
+    </item>
+    
+  </channel>
+</rss>

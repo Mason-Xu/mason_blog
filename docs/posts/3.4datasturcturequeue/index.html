@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><title>队列(Queue) | Stone Cave</title><meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1"><link rel="canonical" href="https://masonxu.xyz/posts/3.4datasturcturequeue/"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/ocean.min.css" rel="stylesheet"><link rel="stylesheet" href="https://masonxu.xyz/css/index-128431572d.css"><link href="https://masonxu.xyz/index.xml" rel="alternate" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/index.xml" rel="feed" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/favicon.ico" rel="shortcut icon"><script>window.baseURL = 'https:\/\/masonxu.xyz';</script></head><body><div class="navbar-fixed"><nav class="navbar"><div class="nav-container container"><div class="nav-wrapper inner"><a href="javascript:void(0)" data-activates="sidebar" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i> </a><a href="https://masonxu.xyz" class="brand-logo"><i class="material-icons hide-on-med-and-down">restaurant_menu</i> Stone Cave</a><ul class="nav-menu tabs tabs-transparent hide-on-med-and-down"><li class="tab"><a href="https://masonxu.xyz/" class="">Home</a></li><li class="tab"><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li class="tab"><a href="https://masonxu.xyz/about/" class="">About</a></li></ul><form class="nav-form hide-on-small-and-down"><div class="form-group"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"></div><div class="form-popout"><div class="search-result"><label>暂无搜索结果</label><ul></ul></div></div></form><ul class="nav-menu apps"><li><a class="search-btn hide-on-med-and-up" href="#search-panel"><i class="material-icons">search</i></a></li><li><a class="term-btn hide-on-small-and-down" href="#term-panel"><i class="material-icons">apps</i></a></li><li><a class="rss-btn hide-on-small-and-down" href="https://masonxu.xyz/index.xml" target="_blank"><i class="material-icons">rss_feed</i></a></li></ul></div></div></nav></div><div class="mobile-search hide-on-med-and-up"><div class="header"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"> <i class="material-icons mobile-search-close">cancel</i></div><div class="content"><label>暂无搜索结果</label><ul></ul></div></div><div class="taxonomy"><div class="container"><div class="inner"><div class="taxonomy-panel row"><div class="col s6"><label>Category</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94">android随笔 <span class="badge">6</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/data-structure">data-structure <span class="badge">4</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/datastructure">datastructure <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/%E6%9D%82%E8%AE%B0">杂记 <span class="badge">1</span></a></li></ul></div><div class="col s6"><label>Tag</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android">android <span class="badge">5</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/data-sturcture">data-sturcture <span class="badge">4</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android-values">android-values <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/dialog">dialog <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/edittext">edittext <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/github">github <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/gradle">gradle <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/list">list <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/queue">queue <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/stack">stack <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/studio">studio <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/%E6%80%BB%E7%BB%93">总结 <span class="badge">1</span></a></li></ul></div></div></div></div></div><ul class="side-nav" id="sidebar"><li><a href="https://masonxu.xyz/" class="">Home</a></li><li><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li><a href="https://masonxu.xyz/about/" class="">About</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/categories/">Categories</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/tags/">Tags</a></li><li><a class="rss-btn-mobile hide-on-med-only" href="https://masonxu.xyz/index.xml" target="_blank">Rss</a></li></ul><main id="single" role="main" class="main-panel"><section class="container"><div class="inner"><section class="post-wrapper"><div class="toc-panel"><nav id="TableOfContents"><ul><li><a href="#队列">队列</a><ul><li><a href="#队列的定义">队列的定义</a></li><li><a href="#队列的顺序存储实现">队列的顺序存储实现</a><ul><li><a href="#类型定义">类型定义</a></li><li><a href="#创建空队列">创建空队列</a></li><li><a href="#判断队列是否已满">判断队列是否已满</a></li><li><a href="#判断队列是否为空">判断队列是否为空</a></li><li><a href="#压入队列">压入队列</a></li><li><a href="#队列的删除操作">队列的删除操作</a></li></ul></li><li><a href="#队列的链式存储实现">队列的链式存储实现</a><ul><li><a href="#链表-判断队列是否为空">链表 判断队列是否为空</a></li><li><a href="#链表-删除操作">链表 删除操作</a></li></ul></li><li><a href="#todo-应用实例-多项式加法运算">TODO: 应用实例:多项式加法运算</a></li><li><a href="#todo-迷宫问题">TODO: 迷宫问题</a></li><li><a href="#队列的图">队列的图</a></li></ul></li></ul></nav></div><div class="post reveal"><div class="card"><section class="breadcrumb-wrapper"><div class="breadcrumbs" role="navigation" aria-label="breadcrumbs navigation"><a class="breadcrumb" href="https://masonxu.xyz"><i class="material-icons">location_on</i>Home</a> <a class="breadcrumb" href="https://masonxu.xyz/posts/">Posts</a> <span class="breadcrumb">队列(Queue)</span></div></section><div class="card-content"><section class="metadata-wrapper"><span class="card-title">队列(Queue) </span><span class="card-meta"><time><span>Tue Jan 23 2018</span></time><address><a href="https://masonxu.xyz/categories/data-structure">Data Structure</a>&nbsp;</address></span></section><article class="article"><h1 id="队列">队列</h1><h2 id="队列的定义">队列的定义</h2><ul><li>类型名称: 队列(Queue)</li><li>数据对象集: 一个有0个或多个元素的有穷线性表</li><li>操作集: 对于一个长度为正整数MaxSize的队列 Q ∈ Queue,记队列中任一元素 X ∈ ElementType</li><li>基本操作:<ol><li><code>Queue CreateQueue(int MaxSize);</code> // 生成空队列,其最大长度为MaxSize</li><li><code>bool IsFull(Queue Q);</code> // 判断队列Q是否已满</li><li><code>bool AddQ(Queue Q, ElementType X);</code> // 将元素X压入队列Q.队列已满,返回false,否则将数据元素X插入队列Q并返回true</li><li><code>bool IsEmpty(Queue Q);</code> // 判断队列Q是否为空,若是,返回true,否则false</li><li><code>ElementType DeleteQ(Queue Q);</code> // 删除并返回队列头元素.若队列为空,返回错误信息,否则将队列头数据元素从队列删除并返回</li></ol></li></ul><h2 id="队列的顺序存储实现">队列的顺序存储实现</h2><blockquote><p>队列是先进先出(FIFO)</p></blockquote><ul><li>溢出的两种解决方法.<ol><li>记录元素个数Size,每次Push和Pop都记录变量size.根据Size的变化可以判断队列的是空是满.</li><li>循环队列 <code>(Rear + 1) % MaxSize = Front</code> 队列满 <code>Rear = Front</code> 队列空</li></ol></li></ul><h3 id="类型定义">类型定义</h3><ul><li>使用循环队列的方法,防止队列溢出</li><li>定义Data数组</li><li>定义指针头尾指针</li><li><p>定义最大容量MaxSize</p><pre><code class="language-c++">typedef int Position;
+typedef struct QNode * PtrToQNode;
+struct QNode{
+ElementType * Data; // 存储元素的数组
+Position Front, Rear;   // 队列的头,尾指针
+int MaxSize;    // 队列最大容量
+};
+typedef PtrToQNode Queue;
+</code></pre><h3 id="创建空队列">创建空队列</h3></li><li><p>申请队列空间</p></li><li><p>申请数组空间</p></li><li><p>定义<code>Rear = Front</code></p></li><li><p>设置数组最大容量</p></li></ul><pre><code class="language-c++">// 生成空队列,最大长度为MaxSize
+Queue CreateQueue(int MaxSize)
+{
+    Queue Q = (Queue)malloc(sizeof(struct QNode));
+    Q-&gt;Data = (ElementType *)malloc(MaxSize * sizeof(ElementType));   
+    Q-&gt;Front = Q-&gt;Rear = 0;
+    Q-&gt;MaxSize = MaxSize;
+    return Q;
+}
+</code></pre><h3 id="判断队列是否已满">判断队列是否已满</h3><ul><li>判断<code>(Rear + 1) % MaxSize = Front</code> <code>c++ // 判断队列是否已满 bool IsFull(Queue Q) { return((Q-&gt;Rear+1) % Q-&gt;MaxSize == Q-&gt;Front); }</code></li></ul><h3 id="判断队列是否为空">判断队列是否为空</h3><ul><li>判断<code>Rear = Front</code> <code>c++ // 判断队列是否为空 bool IsEmpty(Queue Q) { return(Q-&gt;Front == Q-&gt;Rear); }</code></li></ul><h3 id="压入队列">压入队列</h3><ul><li>判断是否队列已满</li><li><p>对队列的尾指针操作</p><pre><code class="language-c++">// 将元素X压入队列
+bool AddQ(Queue Q, ElementType X)
+{
+if(IsFull(Q)){
+    printf(&quot;队列已满&quot;);
+    return false;
+}else{
+    Q-&gt;Rear = (Q-&gt;Rear + 1) % Q-&gt;MaxSize;
+    Q-&gt;Data[Q-&gt;Rear] = X;
+    return true;
+}
+}
+</code></pre><h3 id="队列的删除操作">队列的删除操作</h3></li><li><p>判断为空</p></li><li><p>对队列的头指针操作</p></li></ul><pre><code class="language-c++">// 删除并返回队列的头元素
+ElementType DeleteQ(Queue Q)
+{
+    if(IsEmpty(Q)){
+        printf(&quot;队列空&quot;);
+        return ERROR;
+    }else{
+        Q-&gt;Front = (Q-&gt;Front + 1) % MaxSize;
+        return Q-&gt;Data[Q-&gt;Front];
+    }
+}
+</code></pre><h2 id="队列的链式存储实现">队列的链式存储实现</h2><ul><li>队列的头指针(Front)必须指向链表的头结点<br></li><li>队列的尾(Rear)指向链表的尾结点<br></li></ul><pre><code class="language-c++">typedef struct Node * PtrToNode;
+struct Node{    // 队列中的结点
+    ElementType Data;
+    PtrToQNode Next;
+};
+typedef PtrToQNode Position;
+
+typedef struct QNode * PtrToQNode;
+struct QNode{
+    Position Front, Rear;   // 队列的头尾指针
+    int MaxSize;            // 队列的最大容量
+};
+typedef PtrToQNode Queue;
+</code></pre><h3 id="链表-判断队列是否为空">链表 判断队列是否为空</h3><pre><code class="language-c++">// 判断队列是否为空
+bool IsEmpty(Queue Q)
+{
+    return(Q-&gt;Front == NULL);
+}
+</code></pre><h3 id="链表-删除操作">链表 删除操作</h3><ol><li>判断是否为空</li><li>删除头结点(判断是否只有一个元素或多个元素)<br></li><li><p>释放空间</p><pre><code class="language-c++">// 删除队列头结点
+ElementType DeleteQ(Queue Q)
+{
+Position FrontCell;
+ElementType FrontElem;
+
+if(IsEmpty(Q)){
+    printf(&quot;队列空!&quot;);
+    return ERROR;
+}else{
+    FrontCell = Q-&gt;Front;   
+    if(Q-&gt;Front == Q-&gt;Rear){    // 若队列只有一个元素
+        Q-&gt;Front = Q-&gt;Rear = NULL;  // 删除后队列置为空
+    }else{
+        Q-&gt;Front = Q-&gt;Front-&gt;Next;
+    }
+    FrontElem = FrontCell-&gt;Data;
+
+    free(FrontCell);    // 释放被删除结点空间
+    return FrontElem;
+}
+}
+</code></pre><h2 id="todo-应用实例-多项式加法运算">TODO: 应用实例:多项式加法运算</h2><h2 id="todo-迷宫问题">TODO: 迷宫问题</h2></li></ol><h2 id="队列的图">队列的图</h2><p><img src="http://oz2u8kxpt.bkt.clouddn.com/18-1-23/66277248.jpg" alt=""></p><p><img src="http://oz2u8kxpt.bkt.clouddn.com/18-1-23/1180163.jpg" alt=""></p></article></div><div class="card-action card-action-links"><a class="btn btn-secondary" href="https://masonxu.xyz/tags/data-sturcture">Data Sturcture</a> <a class="btn btn-secondary" href="https://masonxu.xyz/tags/queue">Queue</a></div><div class="card-action"><div id="comment"></div><style>.v .vwrap .vheader .vinput:focus {
+    border-bottom-color: #607d8b;
+  }</style><script>(function (u1, u2, v) {
+    var c = arguments - 1;
+    function a(u) {
+      var d = document, t = 'script', o = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      o.addEventListener('load', function () { --c || new Valine(v); }, false);
+      s.parentElement.insertBefore(o, s);
+    }
+    a(u1); a(u2);
+  })(window.baseURL + '/js/av-min.js', window.baseURL + '/js/Valine.min.js', {
+    el: '#comment',
+    notify: false,
+    verify: false,
+    appId: 'drenIDLMO3yTwiuCl7Hva9nq-gzGzoHsz',
+    appKey: 'rfotKaw6cevwHhOR8FvhwPAp',
+    placeholder: '写点什么吧...',
+    path: window.location.pathname,
+    avatar: 'retro'
+  });</script></div><div class="pagination-single"><span class="pagination-item previous"><i class="material-icons">navigate_before</i> <a href="https://masonxu.xyz/posts/3.2.datasturcturelist/" rel="prev">线性表(List)</a> </span><span class="pagination-item next"><i class="material-icons">navigate_next</i> <a href="https://masonxu.xyz/posts/3.3datasturcturestack/" rel="next">堆栈(Stack)</a></span></div></div></div></section></div></section><footer class="page-footer"><div class="container"><div class="inner"><div class="row"><div class="col l6 s12"><h5 class="white-text">Stone Cave</h5><p class="grey-text text-lighten-4">Theme <a href="https://github.com/stkevintan/canoe" target="_blank">canoe</a> designed by <a href="https://github.com/stkevintan" target="_blank">Kevin Tan</a> with ❤</p><ul class="slink"><li><a href="https://github.com/mason-xu" target="_blank" title="Github"><svg class="svg-icons svg-icons-github"><use xlink:href="#svg-icons-github"></use></svg></a></li><li><a href="https://twitter.com/kevinsfork" target="_blank" title="Google"><svg class="svg-icons svg-icons-google-plus3"><use xlink:href="#svg-icons-google-plus3"></use></svg></a></li><li><a href="http://weibo.com/maosnxu" target="_blank" title="Weibo"><svg class="svg-icons svg-icons-sina-weibo"><use xlink:href="#svg-icons-sina-weibo"></use></svg></a></li></ul></div><div class="col l4 offset-l2 s12"><h5 class="white-text">My Friends</h5><ul><li><a class="grey-text text-lighten-3" href="https://frantic1048.logdown.com/" target="_blank">Frantic1048</a></li><li><a class="grey-text text-lighten-3" href="https://hclmaster.github.io/" target="_blank">HclMaster</a></li><li><a class="grey-text text-lighten-3" href="https://whst.github.io/" target="_blank">WANG Hsü-Tung</a></li></ul></div></div></div></div><div class="footer-copyright"><div class="container"><div class="inner">Copyleft@Mason Xu</div></div></div></footer></main><script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script><script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/go.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://cdn.bootcss.com/lunr.js/2.1.5/lunr.min.js"></script><script type="text/javascript" src="https://masonxu.xyz/js/index-d8a1f91919.js"></script></body></html>

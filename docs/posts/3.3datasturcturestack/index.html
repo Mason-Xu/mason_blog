@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><title>堆栈(Stack) | Stone Cave</title><meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1"><link rel="canonical" href="https://masonxu.xyz/posts/3.3datasturcturestack/"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/ocean.min.css" rel="stylesheet"><link rel="stylesheet" href="https://masonxu.xyz/css/index-128431572d.css"><link href="https://masonxu.xyz/index.xml" rel="alternate" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/index.xml" rel="feed" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/favicon.ico" rel="shortcut icon"><script>window.baseURL = 'https:\/\/masonxu.xyz';</script></head><body><div class="navbar-fixed"><nav class="navbar"><div class="nav-container container"><div class="nav-wrapper inner"><a href="javascript:void(0)" data-activates="sidebar" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i> </a><a href="https://masonxu.xyz" class="brand-logo"><i class="material-icons hide-on-med-and-down">restaurant_menu</i> Stone Cave</a><ul class="nav-menu tabs tabs-transparent hide-on-med-and-down"><li class="tab"><a href="https://masonxu.xyz/" class="">Home</a></li><li class="tab"><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li class="tab"><a href="https://masonxu.xyz/about/" class="">About</a></li></ul><form class="nav-form hide-on-small-and-down"><div class="form-group"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"></div><div class="form-popout"><div class="search-result"><label>暂无搜索结果</label><ul></ul></div></div></form><ul class="nav-menu apps"><li><a class="search-btn hide-on-med-and-up" href="#search-panel"><i class="material-icons">search</i></a></li><li><a class="term-btn hide-on-small-and-down" href="#term-panel"><i class="material-icons">apps</i></a></li><li><a class="rss-btn hide-on-small-and-down" href="https://masonxu.xyz/index.xml" target="_blank"><i class="material-icons">rss_feed</i></a></li></ul></div></div></nav></div><div class="mobile-search hide-on-med-and-up"><div class="header"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"> <i class="material-icons mobile-search-close">cancel</i></div><div class="content"><label>暂无搜索结果</label><ul></ul></div></div><div class="taxonomy"><div class="container"><div class="inner"><div class="taxonomy-panel row"><div class="col s6"><label>Category</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94">android随笔 <span class="badge">6</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/data-structure">data-structure <span class="badge">4</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/datastructure">datastructure <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/%E6%9D%82%E8%AE%B0">杂记 <span class="badge">1</span></a></li></ul></div><div class="col s6"><label>Tag</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android">android <span class="badge">5</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/data-sturcture">data-sturcture <span class="badge">4</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android-values">android-values <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/dialog">dialog <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/edittext">edittext <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/github">github <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/gradle">gradle <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/list">list <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/queue">queue <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/stack">stack <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/studio">studio <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/%E6%80%BB%E7%BB%93">总结 <span class="badge">1</span></a></li></ul></div></div></div></div></div><ul class="side-nav" id="sidebar"><li><a href="https://masonxu.xyz/" class="">Home</a></li><li><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li><a href="https://masonxu.xyz/about/" class="">About</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/categories/">Categories</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/tags/">Tags</a></li><li><a class="rss-btn-mobile hide-on-med-only" href="https://masonxu.xyz/index.xml" target="_blank">Rss</a></li></ul><main id="single" role="main" class="main-panel"><section class="container"><div class="inner"><section class="post-wrapper"><div class="toc-panel"><nav id="TableOfContents"><ul><li><a href="#堆栈-stack">堆栈(Stack)</a><ul><li><a href="#堆栈的定义">堆栈的定义</a></li><li><a href="#堆栈的顺序存储实现">堆栈的顺序存储实现</a><ul><li><a href="#顺序-类型定义">顺序 类型定义</a></li><li><a href="#顺序-判断堆栈是否已满">顺序 判断堆栈是否已满</a></li><li><a href="#顺序-入栈操作-push">顺序 入栈操作 Push</a></li><li><a href="#顺序-判断栈空">顺序 判断栈空</a></li><li><a href="#顺序-出栈操作-pop">顺序 出栈操作 Pop</a></li><li><a href="#todo-一个数组实现两个堆栈">TODO: 一个数组实现两个堆栈</a></li></ul></li><li><a href="#堆栈的链式存储实现">堆栈的链式存储实现</a><ul><li><a href="#链式-类型定义">链式 类型定义</a></li><li><a href="#链式-创建空栈">链式 创建空栈</a></li><li><a href="#链式-判断栈空">链式 判断栈空</a></li><li><a href="#链式-入栈-push">链式 入栈 Push</a></li><li><a href="#链式-出栈-pop">链式 出栈 Pop</a></li><li><a href="#todo-堆栈应用-表达式求值">TODO: 堆栈应用: 表达式求值</a></li><li><a href="#todo-使用堆栈求后缀表达式">TODO: 使用堆栈求后缀表达式</a></li></ul></li><li><a href="#堆栈的图表">堆栈的图表</a></li></ul></li></ul></nav></div><div class="post reveal"><div class="card"><section class="breadcrumb-wrapper"><div class="breadcrumbs" role="navigation" aria-label="breadcrumbs navigation"><a class="breadcrumb" href="https://masonxu.xyz"><i class="material-icons">location_on</i>Home</a> <a class="breadcrumb" href="https://masonxu.xyz/posts/">Posts</a> <span class="breadcrumb">堆栈(Stack)</span></div></section><div class="card-content"><section class="metadata-wrapper"><span class="card-title">堆栈(Stack) </span><span class="card-meta"><time><span>Tue Jan 23 2018</span></time><address><a href="https://masonxu.xyz/categories/data-structure">Data Structure</a>&nbsp;</address></span></section><article class="article"><h1 id="堆栈-stack">堆栈(Stack)</h1><blockquote><p>堆栈是先进后出(FILO)</p></blockquote><h2 id="堆栈的定义">堆栈的定义</h2><ul><li>类型名称: 堆栈(Stack)<br></li><li>数据对象集: 一个有0个或多个元素的有穷线性表<br></li><li>操作集: 对于一个具体的长度为正整数的MaxSize的堆栈S ∈ Stack , 记堆栈中的任一元素 X ∈ ElementType<br></li><li>堆栈的基本操作:<br><ol><li><code>Stack CreateStack(int MaxSize);</code> // 生成空堆栈,其最大长度为MaxSize</li><li><code>bool IsFull(Stack S);</code> // 判断堆栈S是否已满.若S中元素个数等于MaxSize时返回true,否则返回false;</li><li><code>bool Push(Stack short, ElementType X);</code> // 将元素 X 压入堆栈.若堆栈已满,返回false.否则将元素 X 插入到堆栈 S 栈顶处并返回true</li><li><code>ElementType Pop(Stack S);</code> // 删除并返回栈顶元素.若堆栈为空,返回错误信息,否则将栈顶数据元素从堆栈删除并返回</li></ol></li></ul><h2 id="堆栈的顺序存储实现">堆栈的顺序存储实现</h2><h3 id="顺序-类型定义">顺序 类型定义</h3><ul><li>栈的顺序存储结构通常由一个一维数组和一个记录栈顶元素位置的变量组成,另外我们还有一个变量MaxSize用来存储堆栈的最大容量,方便判断堆栈是否已满</li><li>用<code>Data[MaxSize]</code>(下标0~MaxSize-1)来存储一个栈的元素.</li><li>栈底是下标小的那端,Top记录栈顶的下标值.当Top指向<code>-1</code>时,表示空栈,指向<code>MaxSize-1</code> 表示栈满.</li></ul><pre><code class="language-c++">typedef int Position;
+typedef struct SNode * PtrToSNode;
+struct SNode{
+    ElementType *Data;  // 存储元素的数组
+    Position Top;   // 栈顶指针
+    int MaxSize;    // 堆栈最大容量
+};
+typedef PtrToSNode Stack;
+
+### 创建空堆栈
+
+- 创建一个给定容量的空堆栈
+    1. 申请堆栈的空间
+    2. 申请数组的空间
+    3. `Top`栈顶指针指向`-1` 表示 空栈
+    4. 最大容量为MaxSize
+
+```c++
+// 创建一个给定容量的空堆栈的函数
+Stack CreateStack(int MaxSize)
+{
+    Stack S = (Stack)malloc(sizeof(struct SNode));
+    S-&gt;Data = (ElementType *)malloc(MaxSize * sizeof(ElementType));
+    S-&gt;Top = -1;
+    S-&gt;MaxSize = MaxSize;
+    return S;
+}
+</code></pre><h3 id="顺序-判断堆栈是否已满">顺序 判断堆栈是否已满</h3><ul><li>判断<code>Top</code>指针是否等于<code>MaxSize-1</code></li></ul><pre><code class="language-c++">// 判断堆栈S是否已满
+bool IsFull(Stack S)
+{
+    return(S-&gt;Top == S-&gt;MaxSize-1);
+}
+</code></pre><h3 id="顺序-入栈操作-push">顺序 入栈操作 Push</h3><ul><li>先判断堆栈是否已满,若不满<code>Top+1</code> , 并将元素放入Data数组的Top位置中 <code>c++ // 入栈操作 Push bool Push(Stack S, ElementType X) { if(IsFull(S)){ printf(&quot;堆栈已满&quot;); return false; }else{ S-&gt;Data[++(S-&gt;Top)] = X; return true; } }</code></li></ul><h3 id="顺序-判断栈空">顺序 判断栈空</h3><ul><li>判断<code>Top</code> 指针是否指向 <code>-1</code> <code>c++ // 判断栈空 bool IsEmpty(Stack S) { return(S-&gt;Top == -1); }</code></li></ul><h3 id="顺序-出栈操作-pop">顺序 出栈操作 Pop</h3><ul><li>先判断是否栈空,若不空,返回Data[Top],同时将<code>Top-1</code></li><li>否则返回一个ElementType类型的<code>ERROR</code></li></ul><blockquote><p><code>ERROR</code> 错误信息一般是根据具体问题做定义,必须是正常的栈元素数据不可能取到的值</p></blockquote><pre><code class="language-c++">// 出栈操作 Pop,删除并返回栈顶元素
+ElementType Pop(Stack) 
+{
+    if(IsEmpty(S)){
+        printf(&quot;堆栈空!&quot;)
+        return ERROR;   // ERROR 是ElementType 的特殊值,标志错误
+    }else{
+        return(S-&gt;Data[(S-&gt;Top)--]);
+    }
+}
+</code></pre><h3 id="todo-一个数组实现两个堆栈">TODO: 一个数组实现两个堆栈</h3><h2 id="堆栈的链式存储实现">堆栈的链式存储实现</h2><h3 id="链式-类型定义">链式 类型定义</h3><ul><li>栈的链式存储结构(链栈)与单链表类似,但其操作受限,插入和删除只能在链栈的栈顶进行.</li><li>栈顶指针Top就是链表的头指针.为了简便算法,可以带一空的表头结点,表头结点后面第一个结点就是恋战的栈顶结点.</li><li>栈中的额其他结点通过他们的指针<code>Next</code>链接起来,栈底节点的<code>Next</code>为<code>NULL</code>.</li></ul><pre><code class="language-c++">typedef struct SNode * PtrToSNode;
+struct SNode{
+    ElementType Data;
+    PtrToSNode Next;
+};
+typedef PtrToSNode Stack;
+</code></pre><h3 id="链式-创建空栈">链式 创建空栈</h3><ul><li>申请栈空间</li><li><p>设置栈底结点的<code>Next</code>为<code>NULL</code></p><pre><code class="language-c++">// 构建一个堆栈的头结点 ,返回该节点指针,栈底结点的Next为NULL
+Stack CreateStack()
+{   
+Stack S;
+
+S = malloc(sizeof(struct SNode));
+S-&gt;Next = NULL;
+return S;
+}
+</code></pre><h3 id="链式-判断栈空">链式 判断栈空</h3></li><li><p>判断栈底结点的<code>Next</code> 是否为<code>NULL</code></p></li></ul><pre><code class="language-c++">// 判断堆栈S是否为空, 若是返回true ,否则返回false
+bool IsEmpty(Stack S)
+{
+    return(S-&gt;Next == NULL);
+}
+</code></pre><h3 id="链式-入栈-push">链式 入栈 Push</h3><ul><li>申请一个临时结点</li><li>看单链表图理解</li><li><strong>注意只能栈顶操作</strong></li><li><code>S-&gt;Next = NULL</code></li></ul><pre><code class="language-c++">// Push 将元素X压入堆栈S
+bool Push(Stack S, ElementType X)
+{
+    PtrToSNode TmpCell; // 临时指针
+    TmpCell = (PtrToSNode)malloc(sizeof(struct SNode));
+    TmpCell-&gt;Next = S-&gt;Next;
+    S-&gt;Next = TmpCell;
+    return true;
+}
+</code></pre><h3 id="链式-出栈-pop">链式 出栈 Pop</h3><ul><li>判断是否为空</li><li>看单链表图理解</li><li><strong>注意只能栈顶操作</strong></li><li><code>S-&gt;Next = NULL</code></li><li>释放空间 free()</li></ul><pre><code class="language-c++">// 删除并返回堆栈S的栈顶元素
+ElementType Pop(Stack S)
+{
+    PtrToSNode FirstCell;
+    ElementType TopElem;
+
+    if(IsEmpty(S)){
+        printf(&quot;堆栈空!&quot;);
+        return ERROR;
+    }else{
+        FirstCell = S-&gt;Next;
+        TopElem = FirstCell-&gt;Data;
+        S-&gt;Next = FirstCell-&gt;Next;
+        free(FirstCell);
+        return TopElem; // 返回栈顶元素
+    }
+}
+</code></pre><h3 id="todo-堆栈应用-表达式求值">TODO: 堆栈应用: 表达式求值</h3><h3 id="todo-使用堆栈求后缀表达式">TODO: 使用堆栈求后缀表达式</h3><h2 id="堆栈的图表">堆栈的图表</h2><p><img src="http://oz2u8kxpt.bkt.clouddn.com/18-1-23/68103636.jpg" alt=""></p></article></div><div class="card-action card-action-links"><a class="btn btn-secondary" href="https://masonxu.xyz/tags/data-sturcture">Data Sturcture</a> <a class="btn btn-secondary" href="https://masonxu.xyz/tags/stack">Stack</a></div><div class="card-action"><div id="comment"></div><style>.v .vwrap .vheader .vinput:focus {
+    border-bottom-color: #607d8b;
+  }</style><script>(function (u1, u2, v) {
+    var c = arguments - 1;
+    function a(u) {
+      var d = document, t = 'script', o = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      o.addEventListener('load', function () { --c || new Valine(v); }, false);
+      s.parentElement.insertBefore(o, s);
+    }
+    a(u1); a(u2);
+  })(window.baseURL + '/js/av-min.js', window.baseURL + '/js/Valine.min.js', {
+    el: '#comment',
+    notify: false,
+    verify: false,
+    appId: 'drenIDLMO3yTwiuCl7Hva9nq-gzGzoHsz',
+    appKey: 'rfotKaw6cevwHhOR8FvhwPAp',
+    placeholder: '写点什么吧...',
+    path: window.location.pathname,
+    avatar: 'retro'
+  });</script></div><div class="pagination-single"><span class="pagination-item previous"><i class="material-icons">navigate_before</i> <a href="https://masonxu.xyz/posts/3.4datasturcturequeue/" rel="prev">队列(Queue)</a></span></div></div></div></section></div></section><footer class="page-footer"><div class="container"><div class="inner"><div class="row"><div class="col l6 s12"><h5 class="white-text">Stone Cave</h5><p class="grey-text text-lighten-4">Theme <a href="https://github.com/stkevintan/canoe" target="_blank">canoe</a> designed by <a href="https://github.com/stkevintan" target="_blank">Kevin Tan</a> with ❤</p><ul class="slink"><li><a href="https://github.com/mason-xu" target="_blank" title="Github"><svg class="svg-icons svg-icons-github"><use xlink:href="#svg-icons-github"></use></svg></a></li><li><a href="https://twitter.com/kevinsfork" target="_blank" title="Google"><svg class="svg-icons svg-icons-google-plus3"><use xlink:href="#svg-icons-google-plus3"></use></svg></a></li><li><a href="http://weibo.com/maosnxu" target="_blank" title="Weibo"><svg class="svg-icons svg-icons-sina-weibo"><use xlink:href="#svg-icons-sina-weibo"></use></svg></a></li></ul></div><div class="col l4 offset-l2 s12"><h5 class="white-text">My Friends</h5><ul><li><a class="grey-text text-lighten-3" href="https://frantic1048.logdown.com/" target="_blank">Frantic1048</a></li><li><a class="grey-text text-lighten-3" href="https://hclmaster.github.io/" target="_blank">HclMaster</a></li><li><a class="grey-text text-lighten-3" href="https://whst.github.io/" target="_blank">WANG Hsü-Tung</a></li></ul></div></div></div></div><div class="footer-copyright"><div class="container"><div class="inner">Copyleft@Mason Xu</div></div></div></footer></main><script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script><script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/go.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://cdn.bootcss.com/lunr.js/2.1.5/lunr.min.js"></script><script type="text/javascript" src="https://masonxu.xyz/js/index-d8a1f91919.js"></script></body></html>

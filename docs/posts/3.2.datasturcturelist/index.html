@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><title>线性表(List) | Stone Cave</title><meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1"><link rel="canonical" href="https://masonxu.xyz/posts/3.2.datasturcturelist/"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/ocean.min.css" rel="stylesheet"><link rel="stylesheet" href="https://masonxu.xyz/css/index-128431572d.css"><link href="https://masonxu.xyz/index.xml" rel="alternate" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/index.xml" rel="feed" type="application/rss+xml" title="Stone Cave"><link href="https://masonxu.xyz/favicon.ico" rel="shortcut icon"><script>window.baseURL = 'https:\/\/masonxu.xyz';</script></head><body><div class="navbar-fixed"><nav class="navbar"><div class="nav-container container"><div class="nav-wrapper inner"><a href="javascript:void(0)" data-activates="sidebar" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i> </a><a href="https://masonxu.xyz" class="brand-logo"><i class="material-icons hide-on-med-and-down">restaurant_menu</i> Stone Cave</a><ul class="nav-menu tabs tabs-transparent hide-on-med-and-down"><li class="tab"><a href="https://masonxu.xyz/" class="">Home</a></li><li class="tab"><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li class="tab"><a href="https://masonxu.xyz/about/" class="">About</a></li></ul><form class="nav-form hide-on-small-and-down"><div class="form-group"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"></div><div class="form-popout"><div class="search-result"><label>暂无搜索结果</label><ul></ul></div></div></form><ul class="nav-menu apps"><li><a class="search-btn hide-on-med-and-up" href="#search-panel"><i class="material-icons">search</i></a></li><li><a class="term-btn hide-on-small-and-down" href="#term-panel"><i class="material-icons">apps</i></a></li><li><a class="rss-btn hide-on-small-and-down" href="https://masonxu.xyz/index.xml" target="_blank"><i class="material-icons">rss_feed</i></a></li></ul></div></div></nav></div><div class="mobile-search hide-on-med-and-up"><div class="header"><i class="material-icons">search</i> <input type="text" placeholder="输入搜索关键字"> <i class="material-icons mobile-search-close">cancel</i></div><div class="content"><label>暂无搜索结果</label><ul></ul></div></div><div class="taxonomy"><div class="container"><div class="inner"><div class="taxonomy-panel row"><div class="col s6"><label>Category</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/android%E9%9A%8F%E7%AC%94">android随笔 <span class="badge">6</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/data-structure">data-structure <span class="badge">4</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/datastructure">datastructure <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/categories/%E6%9D%82%E8%AE%B0">杂记 <span class="badge">1</span></a></li></ul></div><div class="col s6"><label>Tag</label><ul><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android">android <span class="badge">5</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/data-sturcture">data-sturcture <span class="badge">4</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/android-values">android-values <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/dialog">dialog <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/edittext">edittext <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/git">git <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/github">github <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/gradle">gradle <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/list">list <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/queue">queue <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/stack">stack <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/studio">studio <span class="badge">1</span></a></li><li><a class="btn btn-secondary" href="https://masonxu.xyz/tags/%E6%80%BB%E7%BB%93">总结 <span class="badge">1</span></a></li></ul></div></div></div></div></div><ul class="side-nav" id="sidebar"><li><a href="https://masonxu.xyz/" class="">Home</a></li><li><a href="https://masonxu.xyz/archive/" class="">Archive</a></li><li><a href="https://masonxu.xyz/about/" class="">About</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/categories/">Categories</a></li><li><a class="term-btn-mobile hide-on-med-only" href="https://masonxu.xyz/tags/">Tags</a></li><li><a class="rss-btn-mobile hide-on-med-only" href="https://masonxu.xyz/index.xml" target="_blank">Rss</a></li></ul><main id="single" role="main" class="main-panel"><section class="container"><div class="inner"><section class="post-wrapper"><div class="toc-panel"><nav id="TableOfContents"><ul><li><a href="#线性表">线性表</a><ul><li><a href="#线性表的定义">线性表的定义</a></li><li><a href="#线性表的顺序存储实现">线性表的顺序存储实现</a><ul><li><a href="#类型定义">类型定义</a></li><li><a href="#初始化-create">初始化 Create</a></li><li><a href="#查找">查找</a></li><li><a href="#插入">插入</a></li><li><a href="#删除-delete">删除 Delete</a></li></ul></li><li><a href="#线性表的链式存储实现">线性表的链式存储实现</a><ul><li><a href="#类型定义-1">类型定义</a></li><li><a href="#求表长-length">求表长 Length</a></li><li><a href="#查找-1">查找</a><ul><li><a href="#按序号查找">按序号查找</a></li><li><a href="#按值查找">按值查找</a></li><li><a href="#带头结点的链式表的插入">带头结点的链式表的插入</a></li></ul></li><li><a href="#带头结点的链式表的删除">带头结点的链式表的删除</a></li></ul></li><li><a href="#线性表注意">线性表注意</a></li><li><a href="#todo-广义表和多重链表">TODO: 广义表和多重链表</a></li><li><a href="#链式存储的图表演示">链式存储的图表演示:</a></li></ul></li></ul></nav></div><div class="post reveal"><div class="card"><section class="breadcrumb-wrapper"><div class="breadcrumbs" role="navigation" aria-label="breadcrumbs navigation"><a class="breadcrumb" href="https://masonxu.xyz"><i class="material-icons">location_on</i>Home</a> <a class="breadcrumb" href="https://masonxu.xyz/posts/">Posts</a> <span class="breadcrumb">线性表(List)</span></div></section><div class="card-content"><section class="metadata-wrapper"><span class="card-title">线性表(List) </span><span class="card-meta"><time><span>Mon Jan 22 2018</span></time><address><a href="https://masonxu.xyz/categories/data-structure">Data Structure</a>&nbsp;</address></span></section><article class="article"><h1 id="线性表">线性表</h1><h2 id="线性表的定义">线性表的定义</h2><ul><li>类型名称: 线性表(List)</li><li>数据对象集: 有序序列,(a1,a2,a3, &hellip; ,an), a<sub>1</sub>是表头,a<sub>n</sub>是表尾 ,有前驱结点(直接前驱)和后继结点(直接后继),反映了元素之间一对一的邻接逻辑关系</li><li>操作集: 对于一个具体的线性表 L ∈ List,一个表示位序的整数 i ,一个元素 X ∈ ElementType</li><li>基本操作有:<ol><li><code>List MakeEmpty();</code> // 初始化新的空线性表</li><li><code>ElementType FindKth(List L, int i);</code> // 根据制定的位序,返回L中相应的元素ai</li><li><code>Position Find(List L, ElementType X);</code> // 已知X,返回线性表中与X相同的第一个元素的位置,不存在则返回错误信息</li><li><code>bool Insert(:ist L, ElementType X, int i);</code> // 插入X到L的指定位序,成功返回true,否则返回false</li><li><code>bool Delete(List L, int i);</code> // 从L中删除指定位序,数 组下标为i-1,返回true和false</li><li><code>int Length(List L);</code> // 返回线性表L的长度</li></ol></li></ul><h2 id="线性表的顺序存储实现">线性表的顺序存储实现</h2><h3 id="类型定义">类型定义</h3><ul><li>由于LNode是一个包含数组的结构,使用结构指针传递效率更高,所以我们把List定义为结构指针,利用List定义线性表L. <code>List L;</code></li><li>通过L我们可以访问相应的线性表的内容.下标为i的元素 <code>L-&gt;Data[i]</code>,线性表的长度 <code>L-&gt;Last+1</code></li></ul><pre><code class="language-c++">typedef int Position;
+// 这里的位置就是数组的下标，从0开始.  注意位序和下标的不同
+typedef struct LNode *PtrToLNode;
+struct LNode{
+    ElementType Data[MAXSIZE];
+    Posistion Last;
+};
+typedef PtrToLNode List;
+</code></pre><h3 id="初始化-create">初始化 Create</h3><ul><li>顺序表的初始化即构造一个空表.首先<strong>动态分配表结构所需要的存储空间</strong>.</li><li>然后将 Last 指针置为 -1 ,表示表中没有数据元素. <code>c++ // 初始化 List MakeEmpty() { List L; L = (List)malloc(sizeof(struct LNode)); L-&gt;Last = -1; return L; }</code></li></ul><h3 id="查找">查找</h3><ul><li>查找给定值X相等的数据元素. 从第一个数据元素a<sub>1</sub>起依次与X比较,直到找到与X相等的数据元素,返回下标.</li><li>#没有找到返回ERROR</li><li>时间复杂度为O(n). 比较的次数与位置有关</li></ul><pre><code class="language-c++">// 查找
+#define ERROR = -1; // 将错误信息ERROR的值定义为任一负数
+
+Position Find(List L, ElementType X)
+{
+    Position i = 0;
+    while(i &lt; = L-&gt;Last &amp;&amp; L-&gt;Data[i] != X){
+        i++;
+    }
+    if(i &gt; L-&gt;Last){
+        return ERROR;   // 如果没有找到,返回错误信息
+    }else{
+        return i;       // 找到后返回的是存储的位置
+    }
+}
+</code></pre><h3 id="插入">插入</h3><ul><li>在表的第i个位序上插入一个X新元素,表的长度变为 n+1 . 位序为1 时,最前端,n+1 时,插入序列最后.<ol><li>将a<sub>i</sub>~a<sub>n</sub> 顺序向后移动(顺序是从a<sub>n</sub>到a<sub>i</sub>),为新元素让出位置</li><li>将X置入空出的第i个位序</li><li>修改Last指针(相当于修改表长),使之仍指向最后一个元素</li></ol></li><li>时间复杂度 O(n).</li></ul><blockquote><ol><li>检查表是否已满? 2. 检查位序合法性 3. 注意移动次序和方向</li></ol></blockquote><pre><code class="language-c++">// 在L的制定位序钱插入一个新元素 X,位序i元素的数组位置下标是i-1
+bool Insert(List L, ElementType x, int i)
+{   
+    Position j;
+
+    if(L-&gt;Last == MAXSIZE - 1){
+        // 表空间已满,不能插入
+        printf(&quot;表满&quot;);
+        return false;
+    }
+    if(i &lt; i || i &gt; L-&gt;Last + 2){
+        // 检查插入位序的合法性,是否在1~n+1.n为当前元素个数,即Last+1
+        printf(&quot;位序不合法&quot;);
+        return false;
+    }
+    for( j = L-&gt;Last; j &gt;= i-1; j--){   // Last指向序列最后元素a
+        L-&gt;Data[j+1] = L-&gt;Data[j];      // 将位序i以后的元素顺序向后移动
+    }
+    L-&gt;Data[i-1] = X;                   // 新元素插入地i位序,其数组下标为i-1
+    L-&gt;Last++;                          // Last仍指向最后元素
+    return true;
+}
+</code></pre><h3 id="删除-delete">删除 Delete</h3><ul><li>删除表中位序为i的元素.删除后表长n-1<ol><li>将a<sub>i+1</sub>~a<sub>n</sub>顺序向前移动,a<sub>i</sub> 元素被a<sub>i+1</sub>覆盖</li><li>修改Last指针(相当于修改表长)使之仍指向最后一个元素</li></ol></li></ul><pre><code class="language-c++">// 从L中删除位序为i的元素,数组下标为i-1
+bool Delete(List L, int i)
+{   
+    Position j;
+
+    if( i &lt; 1 || i &gt; L-&gt;Last + 1){  // 检查空表及删除位序的合法性
+        printf(&quot;位序%d不存在元素&quot;, i);
+        return false;
+    }
+    for(j = i; j &lt;= L-&gt;Last; j++){
+        L-&gt;Data[j-1] = L-&gt;Data[j];  // 将位序i+1及后面的元素向前移动
+    }
+    L-&gt;Last--;      // Last 仍指向最后元素
+    return true;
+}
+</code></pre><h2 id="线性表的链式存储实现">线性表的链式存储实现</h2><h3 id="类型定义-1">类型定义</h3><ul><li>用List定义具体的表头结点指针,该指针就代表一个链式表 <code>List L</code></li><li><code>c++ typedef struct LNode *PtrToLNode; typedef int ElementType; struct LNode{ ElementType Data; PtrToLNode Next; }; typedef PtrToLNode Position; // 这里的位置是节点的地址 typedef PtrToLNode List;</code></li></ul><h3 id="求表长-length">求表长 Length</h3><ul><li>在顺序存储中直接返回<code>Last+1</code> 即可</li><li>但是在链式存储中,需要将链表从头到尾遍历一遍,设置一个移动指针 <code>p</code> 和一个计数器 <code>cnt</code></li><li>初始化后 <code>p</code> 从表的第一个结点开始逐步往后移,同时计数器 <code>cnt+1</code> .</li><li>当后面不在有结点时, <code>cnt</code> 的值就是结点数,就是表长.</li></ul><pre><code class="language-c++">// 求线性表L的长度
+int Length(List L)
+{
+    Position p;
+    int cnt = 0;    // 初始化计数器
+    p = L;          // p指向表的第一个结点
+    while(p){
+        p = p-&gt;Next;
+        cnt++;  // 当前p指向的是第cnt个结点
+    }
+
+    return cnt;
+}
+</code></pre><h3 id="查找-1">查找</h3><h4 id="按序号查找">按序号查找</h4><ul><li>从链表的第一个元素结点起,判断当前节点是否是第K个,若是,返回结点的值,不是,这继续后一个,直到表结束. 没有第K个结点则返回错误信息.</li></ul><pre><code class="language-c++">// 1. 查找
+// 1.1 按序号查找
+#define ERROR1 = -1;    // 一般定义为表中无法取得的值
+
+ElementType FindKth(List L, int k)
+{
+    Position p;
+
+    int cnt = 1; // 位序从1开始
+    p = L;       // p指向第一个结点
+    while(p &amp;&amp; cnt &lt; k){  
+        p = p-&gt;Next;
+        cnt++;
+    }
+    if((cnt == k) &amp;&amp; p){    // cnt等于k且p指针存在
+        return p-&gt;Data;
+    }else{
+        return ERROR1;
+    }
+}
+</code></pre><h4 id="按值查找">按值查找</h4><ul><li>从头到尾遍历,直到找到为止.</li><li>从第一个元素开始,判断 Data[i] 是否等于X,若是,返回下标i,否则继续下一个.找不到,返回ERROR NULL . ```c++ // 1.2 按值查找</li></ul><p>#define ERROR2 NULL; // 用空地址表示错误</p><p>Position Find(List L, ElementType X) { Position p = L; // p指向第一个结点</p><pre><code>while( p &amp;&amp; p-&gt;Data != X){
+    p = p-&gt;Next;
+}
+
+// 直接return p 也可以
+if(p){
+    return p;
+}else{
+    return ERROR2;
+}
+</code></pre><p>}</p><pre><code>
+
+### 插入
+
+
+#### 普通插入
+
+- 在指定位序 `i `前插入一个新元素 X .当位序为 `1` 时,插入链表的头,i为 `n+1` 时,插入链表尾.  
+- 基本思路:  如果i不为1,则找到位序为 `i-1` 的结点; 若存在,则申请一个新结点并在数据域天上相应值X,然后将新结点插入到结点 `pre` 之后,返回结果链表;如果不存在则范湖错误信息.
+
+```c++
+// 插入
+#define ERROR3 NULL  // 用空地址表示错误
+
+List Insert(List L, ElementType X, int i)
+{
+    Position tmp, pre;
+
+    tmp = (Position)malloc(sizeof(struct LNode));   // 申请,填装结点
+    tmp-&gt;Data = X;
+    if(i == 1){ // 新结点在表头指针
+        tmp-&gt;Next = L;
+        return tmp; //  返回新表头指针
+    }else{
+        // 查找位序为i-1的节点
+        
+        int cnt = 1;    // 位序从1开始
+        pre = L;    // pre指向L的第一个结点
+        while(pre &amp;&amp; cnt &lt; i-1){
+            pre = pre-&gt;Next;
+            cnt++;
+        }
+        if(pre == NULL || cnt != i-1){
+            printf(&quot;插入位置参数错误\n&quot;);
+            free(tmp);
+            return ERROR3;
+        }else{  // 找到待插结点的前一个结点pre
+            //插入新结点并返回表头L
+            tmp-&gt;Next = pre-&gt;Next;
+            pre-&gt;Next = tmp;
+            return L;
+        }
+    }
+}
+</code></pre><h4 id="带头结点的链式表的插入">带头结点的链式表的插入</h4><ul><li>上述函数表头指针L的值可能会发生变化&mdash;当插入发生在表头时,<code>L</code>需要将指向新的表头结点;其他情况 <code>L</code> 值不变</li><li>所以我们可以为链表增加一个空的 &lsquo;头结点&rsquo; ,真正的元素连接在这个空结点之后. 这样做的好处是,无论在哪里插入或删除,L的值一直指向固定的空结点,不会改变.</li><li><p>算法的时间复杂度是 O(n).</p><pre><code class="language-c++">// 带头结点的链式表的插入
+bool Insert(List L, ElementType X, int i)
+{   // 这里默认L有头结点
+Position tmp, pre;
+int cnt = 0;
+
+// 查找位序为i-1的结点
+pre = L;    // pre指向表头
+while(pre &amp;&amp; cnt &lt; i-1){
+    pre = pre-&gt;Next;
+    cnt++;
+}
+if(pre == NULL || cnt != i-1){  // 所找结点不在L中
+    printf(&quot;插入位置参数错误!&quot;);
+    return false;
+}else{  // 找到了待插结点的前一个结点pre,若i为1,pre就指向表头
+    // 插入新结点
+    tmp = (Position)malloc(sizeof(struct LNOde));   // 申请,填装结点
+    tmp-&gt;Data = X;
+    tmp-&gt;Next = pre-&gt;Next;
+    pre-&gt;Next = tmp;
+    return true;
+}
+}
+</code></pre></li></ul><h3 id="带头结点的链式表的删除">带头结点的链式表的删除</h3><ul><li>在单向链表中删除指定位序<code>i</code>的元素,首先需要找到被删除结点的前一个元素,然后删除结点并释放空间.</li><li><p>时间复制度 O(n).</p><pre><code class="language-c++">// 带头结点的链式表的删除
+bool Delete(List L, int i)
+{   // 这里默认L有头结点
+Position tmp, pre;
+int cnt = 0;
+
+// 查找位序为i-1的结点
+pre = L;    // pre 指向表头
+while(pre &amp;&amp; cnt &lt; i-1){
+    pre = pre-&gt;Next;
+    cnt++;
+}
+if(pre == NULL || cnt != i-1 || pre-&gt;Next == NULL){
+    // 所找结点或位序为i的结点不在L中
+    printf(&quot;插入位置参数错误!&quot;);
+    return false;
+}else{  // 找到待删结点的前一个结点pre
+    // 将结点删除
+    tmp = pre-&gt;Next;
+    pre-&gt;Next = tmp-&gt;Next;
+    free(tmp);
+    return true;
+}
+}
+</code></pre></li></ul><h2 id="线性表注意">线性表注意</h2><ol><li>在单链表上插入,删除一个结点,必须知道其前驱结点</li><li>单链表不就有按序号随机访问的特点,只能从头指针开始一个个顺序执行</li></ol><h2 id="todo-广义表和多重链表">TODO: 广义表和多重链表</h2><h2 id="链式存储的图表演示">链式存储的图表演示:</h2><p><img src="http://oz2u8kxpt.bkt.clouddn.com/18-1-23/82262041.jpg" alt=""></p></article></div><div class="card-action card-action-links"><a class="btn btn-secondary" href="https://masonxu.xyz/tags/data-sturcture">Data Sturcture</a> <a class="btn btn-secondary" href="https://masonxu.xyz/tags/list">List</a></div><div class="card-action"><div id="comment"></div><style>.v .vwrap .vheader .vinput:focus {
+    border-bottom-color: #607d8b;
+  }</style><script>(function (u1, u2, v) {
+    var c = arguments - 1;
+    function a(u) {
+      var d = document, t = 'script', o = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      o.addEventListener('load', function () { --c || new Valine(v); }, false);
+      s.parentElement.insertBefore(o, s);
+    }
+    a(u1); a(u2);
+  })(window.baseURL + '/js/av-min.js', window.baseURL + '/js/Valine.min.js', {
+    el: '#comment',
+    notify: false,
+    verify: false,
+    appId: 'drenIDLMO3yTwiuCl7Hva9nq-gzGzoHsz',
+    appKey: 'rfotKaw6cevwHhOR8FvhwPAp',
+    placeholder: '写点什么吧...',
+    path: window.location.pathname,
+    avatar: 'retro'
+  });</script></div><div class="pagination-single"><span class="pagination-item previous"><i class="material-icons">navigate_before</i> <a href="https://masonxu.xyz/posts/datasturcturebase/" rel="prev">数据结构实现基础</a> </span><span class="pagination-item next"><i class="material-icons">navigate_next</i> <a href="https://masonxu.xyz/posts/3.4datasturcturequeue/" rel="next">队列(Queue)</a></span></div></div></div></section></div></section><footer class="page-footer"><div class="container"><div class="inner"><div class="row"><div class="col l6 s12"><h5 class="white-text">Stone Cave</h5><p class="grey-text text-lighten-4">Theme <a href="https://github.com/stkevintan/canoe" target="_blank">canoe</a> designed by <a href="https://github.com/stkevintan" target="_blank">Kevin Tan</a> with ❤</p><ul class="slink"><li><a href="https://github.com/mason-xu" target="_blank" title="Github"><svg class="svg-icons svg-icons-github"><use xlink:href="#svg-icons-github"></use></svg></a></li><li><a href="https://twitter.com/kevinsfork" target="_blank" title="Google"><svg class="svg-icons svg-icons-google-plus3"><use xlink:href="#svg-icons-google-plus3"></use></svg></a></li><li><a href="http://weibo.com/maosnxu" target="_blank" title="Weibo"><svg class="svg-icons svg-icons-sina-weibo"><use xlink:href="#svg-icons-sina-weibo"></use></svg></a></li></ul></div><div class="col l4 offset-l2 s12"><h5 class="white-text">My Friends</h5><ul><li><a class="grey-text text-lighten-3" href="https://frantic1048.logdown.com/" target="_blank">Frantic1048</a></li><li><a class="grey-text text-lighten-3" href="https://hclmaster.github.io/" target="_blank">HclMaster</a></li><li><a class="grey-text text-lighten-3" href="https://whst.github.io/" target="_blank">WANG Hsü-Tung</a></li></ul></div></div></div></div><div class="footer-copyright"><div class="container"><div class="inner">Copyleft@Mason Xu</div></div></div></footer></main><script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script><script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/go.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="https://cdn.bootcss.com/lunr.js/2.1.5/lunr.min.js"></script><script type="text/javascript" src="https://masonxu.xyz/js/index-d8a1f91919.js"></script></body></html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Sturcture on Stone Cave</title>
+    <link>https://masonxu.xyz/tags/data-sturcture/</link>
+    <description>Recent content in Data Sturcture on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Tue, 23 Jan 2018 15:25:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/tags/data-sturcture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>堆栈(Stack)</title>
+      <link>https://masonxu.xyz/posts/3.3datasturcturestack/</link>
+      <pubDate>Tue, 23 Jan 2018 15:25:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/3.3datasturcturestack/</guid>
+      <description>堆栈(Stack) 堆栈是先进后出(FILO) 堆栈的定义 类型名称: 堆栈(Stack) 数据对象集: 一个有0个或多个元素的有穷线性表 操作集: 对于一</description>
+    </item>
+    
+    <item>
+      <title>队列(Queue)</title>
+      <link>https://masonxu.xyz/posts/3.4datasturcturequeue/</link>
+      <pubDate>Tue, 23 Jan 2018 15:25:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/3.4datasturcturequeue/</guid>
+      <description>队列 队列的定义 类型名称: 队列(Queue) 数据对象集: 一个有0个或多个元素的有穷线性表 操作集: 对于一个长度为正整数MaxSize的队列 Q ∈ Q</description>
+    </item>
+    
+    <item>
+      <title>线性表(List)</title>
+      <link>https://masonxu.xyz/posts/3.2.datasturcturelist/</link>
+      <pubDate>Mon, 22 Jan 2018 22:25:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/3.2.datasturcturelist/</guid>
+      <description>线性表 线性表的定义 类型名称: 线性表(List) 数据对象集: 有序序列,(a1,a2,a3, &amp;hellip; ,an), a1是表头,an是表尾 ,有前驱结点(直接前驱)和</description>
+    </item>
+    
+    <item>
+      <title>数据结构实现基础</title>
+      <link>https://masonxu.xyz/posts/datasturcturebase/</link>
+      <pubDate>Mon, 15 Jan 2018 18:25:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/datasturcturebase/</guid>
+      <description>数据结构实现基础 数据存储基础 数组 int a[]; a[i]; int a[5] = {1,2,3,4,5}; int a[3][4]; a[1][2]; 类型定义 typedef 原有类型名 新类型名; typedef int ElementType; 指针 指针变量是用啦存放变量的地址。 指针变量要先赋值才</description>
+    </item>
+    
+  </channel>
+</rss>
