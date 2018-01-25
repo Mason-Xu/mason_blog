@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyleft@Mason Xu</copyright>
-    <lastBuildDate>Tue, 23 Jan 2018 15:25:52 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jan 2018 20:46:52 +0800</lastBuildDate>
     
 	<atom:link href="https://masonxu.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C/C&#43;&#43; 指针</title>
+      <link>https://masonxu.xyz/posts/2.7-cc&#43;&#43;-pointer/</link>
+      <pubDate>Thu, 25 Jan 2018 20:46:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/2.7-cc&#43;&#43;-pointer/</guid>
+      <description>指针 什么是指针 指针就是变量的地址 (不严谨) 指针是一个unsigned类型的整数 指针变量 指针变量是用来存放指针的(也可以理解程地址) 在数据类型</description>
+    </item>
     
     <item>
       <title>堆栈(Stack)</title>

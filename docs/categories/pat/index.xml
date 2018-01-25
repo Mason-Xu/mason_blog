@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pat on Stone Cave</title>
+    <link>https://masonxu.xyz/categories/pat/</link>
+    <description>Recent content in Pat on Stone Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyleft@Mason Xu</copyright>
+    <lastBuildDate>Thu, 25 Jan 2018 20:46:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonxu.xyz/categories/pat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C/C&#43;&#43; 指针</title>
+      <link>https://masonxu.xyz/posts/2.7-cc&#43;&#43;-pointer/</link>
+      <pubDate>Thu, 25 Jan 2018 20:46:52 +0800</pubDate>
+      
+      <guid>https://masonxu.xyz/posts/2.7-cc&#43;&#43;-pointer/</guid>
+      <description>指针 什么是指针 指针就是变量的地址 (不严谨) 指针是一个unsigned类型的整数 指针变量 指针变量是用来存放指针的(也可以理解程地址) 在数据类型</description>
+    </item>
+    
+  </channel>
+</rss>

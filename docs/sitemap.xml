@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://masonxu.xyz/posts/2.7-cc&#43;&#43;-pointer/</loc>
+    <lastmod>2018-01-25T20:46:52+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://masonxu.xyz/posts/3.3datasturcturestack/</loc>
     <lastmod>2018-01-23T15:25:52+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -206,8 +213,22 @@
   </url>
   
   <url>
+    <loc>https://masonxu.xyz/tags/pat/</loc>
+    <lastmod>2018-01-25T20:46:52+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://masonxu.xyz/categories/pat/</loc>
+    <lastmod>2018-01-25T20:46:52+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://masonxu.xyz/posts/</loc>
-    <lastmod>2018-01-23T15:25:52+08:00</lastmod>
+    <lastmod>2018-01-25T20:46:52+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -228,7 +249,7 @@
   
   <url>
     <loc>https://masonxu.xyz/</loc>
-    <lastmod>2018-01-23T15:25:52+08:00</lastmod>
+    <lastmod>2018-01-25T20:46:52+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
